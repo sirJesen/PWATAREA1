@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi primera página web</title>
+</head>
+<body>
+    <h1>Hola, Mundo!</h1>
+    <p>Mi nombre es Jefferson</p>
+
+    <a href="URL_de_tu_red_social" target="_black">Mi página de redes sociales favorita</a>
+
+    <ul>
+        <li>Leer libros</li>
+        <li>Jugar al ajedrez</li>
+        <li>Hacer senderismo</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>País</th>
+            <th>Capital</th>
+        </tr>
+        <tr>
+            <td>Estados Unidos</td>
+            <td>Washington, D.C.</td>
+        </tr>
+        <tr>
+            <td>Francia</td>
+            <td>París</td>
+        </tr>
+        <tr>
+            <td>Japón</td>
+            <td>Tokio</td>
+        </tr>
+    </table>
+
+
+  <h1>Formulario</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+  <title>Mi biografía</title>
+     <style>
+         body {
+             background-color: turquoise; 
+             font-family: Arial, sans-serif; 
+         }
+
+         
+         h1 {
+             color: Green; 
+             font-size: 24px; 
+         }
+     </style>
+
+     <h1>Mi biografía</h1>
+     <p>Soy un amante a la inteligencia artificial</p>
+ </body>
+ </html>
+
+ <title>Caja con Slider</title>
+     <style>
+         
+         .caja {
+             width: 300px;
+             height: 100px;
+             background-color: #3491db; 
+             border: 2px solid #2950b9; 
+             border-radius: 10px; 
+             text-align: center;
+             padding: 30px;
+             margin: 0 auto; 
+         }
+
+         
+         input[type="range"] {
+             width: 80%;
+             margin-top: 20px;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="caja">
+         <p>Sistemas Intelligentes</p>
+         <input type="range" min="0" max="100" value="50">
+     </div>
+ </body>
+ </html>
+
+<!DOCTYPE html>
+<title>Navegación y Estilos</title>
+    <style>
+      
+        .navbar {
+            background-color: #333; 
+            overflow: hidden;
+        }
+
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        
+        .navbar a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="#seccion1">Sección 1</a>
+        <a href="#seccion2">Sección 2</a>
+        <a href="#seccion3">Sección 3</a>
+        <a href="https://www.youtube.com/" target="_blank">Red Social 1</a>
+        <a href="https://www.facebook.com/" target="_blank">Red Social 2</a>
+    </div>
+
+    
+    <div id="seccion1" style="height: 200px; background-color: #3498db;">
+        <h2>Sección 1</h2>
+    </div>
+
+    <div id="seccion2" style="height: 200px; background-color: #e74c3c;">
+        <h2>Sección 2</h2>
+    </div>
+
+    <div id="seccion3" style="height: 200px; background-color: #27ae60;">
+        <h2>Sección 3</h2>
+    </div>
+</body>
+</html>
+
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Galería de Imágenes</title>
+       <style>
+           /* Estilos para las imágenes de la galería */
+           .imagen-galeria {
+               cursor: pointer;
+           }
+
+           /* Estilos para la ventana emergente */
+           .ventana-emergente {
+               display: none;
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-color: rgba(0, 0, 0, 0.7);
+               text-align: center;
+           }
+
+           .ventana-contenido {
+               max-width: 80%;
+               max-height: 80%;
+               margin: 10% auto;
+               background-color: white;
+           }
+
+           .imagen-ampliada {
+               width: 100%;
+               max-height: 80%;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Galería de Imágenes</h1>
+
+       <img class="imagen-galeria" src="imagen1.jpg" alt="Pasatiempo 1">
+       <img class="imagen-galeria" src="imagen2.jpg" alt="Pasatiempo 2">
+       <img class="imagen-galeria" src="imagen3.jpg" alt="Pasatiempo 3">
+       <div class="ventana-emergente" id="ventana">
+           <div class="ventana-contenido">
+               <img class="imagen-ampliada" id="imagen-ampliada">
+           </div>
+       </div>
+
+       <script>
+           const imagenes = document.querySelectorAll(".imagen-galeria");
+           const ventana = document.getElementById("ventana");
+           const imagenAmpliada = document.getElementById("imagen-ampliada");
+
+           imagenes.forEach((imagen) => {
+               imagen.addEventListener("click", () => {
+                   ventana.style.display = "block";
+                   imagenAmpliada.src = imagen.src;
+               });
+           });
+
+           ventana.addEventListener("click", (event) => {
+               if (event.target === ventana) {
+                   ventana.style.display = "none";
+               }
+           });
+       </script>
+
+     <title>Mi Biografía</title>
+         <style>
+             body {
+                 font-family: Arial, sans-serif;
+                 background-color: #f2f2f2;
+                 margin: 0;
+                 padding: 0;
+             }
+
+             header {
+                 background-color: #333;
+                 color: white;
+                 text-align: center;
+                 padding: 20px;
+             }
+
+             h1 {
+                 font-size: 36px;
+             }
+
+             .container {
+                 max-width: 960px;
+                 margin: 0 auto;
+                 display: flex;
+             }
+
+             main {
+                 flex: 2;
+                 background-color: turquoise;
+                 padding: 20px;
+             }
+
+             aside {
+                 flex: 1;
+                 background-color: #666;
+                 color: white;
+                 padding: 20px;
+             }
+
+             footer {
+                 background-color: #333;
+                 color: white;
+                 text-align: center;
+                 padding: 10px;
+             }
+         </style>
+    
+         <header>
+             <h1>Mi Biografía</h1>
+         </header>
+
+         <div class="container">
+             <main>
+                 <section>
+                     <h2>Sobre mí</h2>
+                     <p>Me gusta jugar futbol</p>
+                 </section>
+
+                 <section>
+                     <h2>Experiencia</h2>
+                     <p>Gane una partida en far</p>
+                 </section>
+             </main>
+
+             <aside>
+                 <section>
+                     <h2>Redes sociales</h2>
+                     <p>Facebook.Tiktok,Youtube</p>
+                 </section>
+             </aside>
+         </div>
+
+         <footer>
+             <p>&copy; 2023 Devmachine. Todos los derechos reservados.</p>
+         </footer>
+     </body>
+     </html>
+
+
+
